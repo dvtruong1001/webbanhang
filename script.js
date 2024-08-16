@@ -1,17 +1,22 @@
 
 window.addEventListener("load", (event) => {
-    
-    const icon = document.getElementsByClassName("icon-menu")[0];
     const submenu = document.getElementsByClassName("submenu")[0];
-    icon.addEventListener("click", function(e) {
+    const icon = document.getElementsByClassName("icon-menu")[0];
 
-        if(submenu.style.display === "none")
-        {
-            submenu.style.display = "flex";
-        } else {
+    icon.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (submenu.style.display === "flex") {
             submenu.style.display = "none";
+            
+            
+
+        } else {
+            submenu.style.display = "flex";
+            
+            
         }
-        
+
     })
 
 });

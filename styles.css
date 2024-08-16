@@ -41,7 +41,7 @@
      flex-direction: column;
      text-align: center;
      color: rgb(252, 44, 130);
-     
+
      font-size: 1.7rem;
 
      padding: 0 25px;
@@ -116,10 +116,20 @@
 
  }
 
+
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
  nav .submenu {
      display: none;
      padding: 10px;
-
      list-style: none;
      background-color: rgb(188, 223, 255);
      text-align: center;
@@ -128,6 +138,8 @@
      flex-direction: row;
      justify-content: space-around;
      flex-wrap: wrap;
+     animation: fadeIn 0.5s ease-in-out;
+     user-select: none;
 
  }
 
@@ -276,9 +288,11 @@
      margin: 0;
 
      perspective: 1000px;
-     /* Tạo cảm giác 3D */
+     
      transform-style: preserve-3d;
      transition: transform 0.6s;
+
+     animation: fadeIn 1.5s ease-in-out;
  }
 
 
