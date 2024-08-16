@@ -14,7 +14,7 @@
      background-color: rgba(188, 223, 255, 0.616);
      display: flex;
      width: 100%;
-     height: 110px;
+     height: 50px;
      justify-content: space-between;
  }
 
@@ -41,10 +41,10 @@
      flex-direction: column;
      text-align: center;
      color: rgb(252, 44, 130);
-     margin-top: 0;
-     margin-bottom: 0;
-     padding-left: 20px;
-     font-size: 1.6rem;
+     
+     font-size: 1.7rem;
+
+     padding: 0 25px;
  }
 
 
@@ -55,102 +55,166 @@
      text-align: center;
      margin-top: auto;
      margin-bottom: auto;
-    
 
  }
 
 
  nav header ul.menu li {
      padding: auto;
+     margin: 20px 20px;
  }
 
 
- nav header ul.menu li a {
+
+
+
+ nav header ul.menu {
+     display: flex;
+     list-style: none;
+     text-align: center;
+     height: 100%;
+     padding: auto auto;
+     flex-direction: column;
+
+ }
+
+
+ nav header ul.menu .icon-menu {
+     width: 100%;
+     display: flex;
+     margin: auto auto;
+     justify-content: space-between;
+     padding: 5px 20px;
+     text-align: center;
+     justify-items: center;
+
+ }
+
+
+ nav header ul.menu .icon-menu:hover {
+     cursor: pointer;
+
+ }
+
+
+ nav .submenu li {
+
+
+     padding: 15px;
+
+
+ }
+
+ nav .submenu li a {
+
      font-weight: bold;
      color: black;
      text-decoration: none;
      font-size: 1.2rem;
      padding: 15px;
-    
+
+
+ }
+
+ nav .submenu {
+     display: none;
+     padding: 10px;
+
+     list-style: none;
+     background-color: rgb(188, 223, 255);
+     text-align: center;
+     height: 100%;
+     padding: auto auto;
+     flex-direction: row;
+     justify-content: space-around;
+     flex-wrap: wrap;
+
  }
 
 
- nav header ul.menu li a:hover {
+ nav .submenu li a:hover {
      font-weight: bold;
      color: rgb(59, 185, 0);
      text-decoration: underline;
      text-decoration-color: black;
      text-decoration-thickness: 3px;
      font-size: 1.4rem;
-     
+
  }
 
 
  .item-error {
-     color: black;
-     background-color: rgb(255, 145, 145);
+     color: rgb(255, 145, 145);
+     background-color: rgb(73, 38, 38);
      width: 100%;
-     padding: 20px;
+     padding: 10px;
+     margin-top: 10px;
      border-radius: 10px;
  }
 
 
  .item-success {
-     color: black;
-     background-color: rgb(121, 255, 103);
+     color: rgb(121, 255, 103);
+     background-color: rgb(47, 82, 43);
      width: 100%;
-     padding: 20px;
+     padding: 10px;
+     margin-top: 10px;
      border-radius: 10px;
  }
 
 
  .item-primary {
-     color: black;
-     background-color: rgb(97, 179, 233);
+     color: rgb(97, 179, 233);
+     background-color: rgb(57, 76, 88);
      width: 100%;
-     padding: 20px;
+     padding: 10px;
+     margin-top: 10px;
      border-radius: 10px;
  }
 
 
  .item-warning {
-     color: black;
-     background-color: rgb(230, 255, 117);
+     color: rgb(210, 247, 45);
+     background-color: rgb(104, 112, 69);
      width: 100%;
-     padding: 20px;
+     padding: 10px;
      border-radius: 10px;
+     margin-top: 10px;
  }
 
  .container {
-     padding: 0;
-     margin: 20px;
+
+     margin: 20px auto;
      display: inline-block;
      text-align: center;
      width: 100%;
-     height: 100%;
+
  }
 
  .container .category {
-     margin: 0;
-     padding: 0;
+
      display: block;
 
  }
 
  .container .category .list {
      display: grid;
-     grid-template-columns: repeat(auto-fit, 240px);
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
      grid-gap: 30px 40px;
      grid-template-rows: repeat(auto-fit, 1fr);
+     overflow: scroll;
 
  }
 
 
  .container .category .list .item {
-     border-style: solid;
+     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+     /* border-style: solid; */
      padding: 15px;
      border-radius: 8px;
      text-align: center;
+     margin: 10px 10px;
+
  }
 
 
@@ -160,6 +224,7 @@
 
  .container .category .list .item .logo {
      font-size: 5rem;
+
      text-align: center;
  }
 
@@ -169,15 +234,26 @@
      width: 100%;
  }
 
- .info {
-     margin-bottom: 120px;
+ .products .info {
+     margin-bottom: 60px;
  }
 
+
+ .products .info .name {
+     font-weight: bold;
+     font-size: 2rem;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+
+
+
  .products .list {
+
      display: grid;
-     grid-template-columns: repeat(auto-fit, 240px);
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
      grid-gap: 40px 52px;
      grid-template-rows: repeat(auto-fit, 1fr);
+     padding: 0 30px;
 
  }
 
@@ -186,6 +262,11 @@
      box-shadow: 0 0 0 8px #e0f3f7, 0 0 0 12px #9be6f0;
      padding: 10px;
      background-color: rgb(206, 244, 255);
+     margin-top: 20px;
+     margin-left: 10px;
+     margin-right: 10px;
+
+
  }
 
  .products .list .product .image img {
@@ -193,12 +274,96 @@
      width: 100%;
      padding: 0;
      margin: 0;
+
+     perspective: 1000px;
+     /* Tạo cảm giác 3D */
+     transform-style: preserve-3d;
+     transition: transform 0.6s;
+ }
+
+
+ .products .list .product .image img:hover {
+     transform: rotateY(180deg);
+
  }
 
 
  .products .list .product .buy {
      background-color: rgb(189, 245, 245);
-     padding-left: 30px;
-     padding-right: 30px;
      border-radius: 10px;
+     padding: 20px 25px;
+     margin: 10px auto;
+     cursor: pointer;
+     border-color: aquamarine;
+ }
+
+
+ footer {
+
+
+     width: 100%;
+     height: 90px;
+     background-color: #9be6f0;
+     position: relative;
+
+ }
+
+ footer span {
+
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+
+ }
+
+ .cp-right {
+     text-decoration: none;
+     color: rgb(240, 119, 119);
+     font-weight: bold;
+     text-transform: uppercase;
+ }
+
+
+ @media only screen and (max-width: 470px) {
+
+
+     .container .category .list {
+         display: flex;
+
+         overflow: scroll;
+
+     }
+
+
+     .products .list {
+         display: flex;
+
+         padding: 0 30px;
+         overflow: auto;
+         justify-content: space-between;
+
+
+     }
+
+
+     .products .list .product {
+
+         border-radius: 10px;
+         box-shadow: 0 0 0 8px #e0f3f7, 0 0 0 12px #9be6f0;
+         padding: 10px;
+         background-color: rgb(206, 244, 255);
+         margin: 50px auto;
+         scroll-behavior: smooth;
+         min-width: 200px;
+
+     }
+
+
+     .products .list .product .buy {
+         background-color: rgb(189, 245, 245);
+         border-radius: 10px;
+         padding: 10px 15px;
+         margin: 5px auto;
+     }
  }
