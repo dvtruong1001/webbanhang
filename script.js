@@ -8,15 +8,14 @@ window.addEventListener("load", (event) => {
 
         if (submenu.style.display === "flex") {
             submenu.style.display = "none";
-            
-            
 
         } else {
             submenu.style.display = "flex";
-            
             
         }
 
     })
 
+
+    
 });

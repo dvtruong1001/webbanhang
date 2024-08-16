@@ -91,32 +91,6 @@
  }
 
 
- nav header ul.menu .icon-menu:hover {
-     cursor: pointer;
-
- }
-
-
- nav .submenu li {
-
-
-     padding: 15px;
-
-
- }
-
- nav .submenu li a {
-
-     font-weight: bold;
-     color: black;
-     text-decoration: none;
-     font-size: 1.2rem;
-     padding: 15px;
-
-
- }
-
-
  @keyframes fadeIn {
      from {
          opacity: 0;
@@ -126,6 +100,8 @@
          opacity: 1;
      }
  }
+
+
 
  nav .submenu {
      display: none;
@@ -142,6 +118,27 @@
      user-select: none;
 
  }
+
+ nav header ul.menu .icon-menu:hover {
+     
+     cursor: pointer;
+ }
+
+ nav .submenu li {
+     padding: 15px;
+ }
+
+ nav .submenu li a {
+
+     font-weight: bold;
+     color: black;
+     text-decoration: none;
+     font-size: 1.2rem;
+     padding: 15px;
+
+
+ }
+
 
 
  nav .submenu li a:hover {
@@ -214,7 +211,7 @@
      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
      grid-gap: 30px 40px;
      grid-template-rows: repeat(auto-fit, 1fr);
-     overflow: scroll;
+
 
  }
 
@@ -287,17 +284,36 @@
      padding: 0;
      margin: 0;
 
-     perspective: 1000px;
-     
-     transform-style: preserve-3d;
-     transition: transform 0.6s;
-
      animation: fadeIn 1.5s ease-in-out;
+ }
+
+ @keyframes rotateImg {
+
+     0% {
+         transform: rotateY(0deg) scale(1);
+     }
+
+     40% {
+         transform: rotateY(15deg) scale(1.4);
+     }
+
+     60% {
+         transform: rotateY(-180deg) scale(1.4);
+     }
+
+
+
+     1000% {
+         transform: scale(1);
+     }
+
  }
 
 
  .products .list .product .image img:hover {
-     transform: rotateY(180deg);
+
+     animation: rotateImg 3s forwards;
+
 
  }
 
